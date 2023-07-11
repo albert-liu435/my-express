@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "testdev":"node examples/index.js",
     "test": "mocha test/index.js --exit",
     "dev": "node examples/index.js"
   },
@@ -17,6 +18,7 @@
     "karma-chrome-launcher": "^3.2.0",
     "karma-mocha": "^2.0.1",
     "merge-descriptors": "^1.0.1",
+    "mocha": "^10.2.0",
     "supertest": "^6.3.3"
   }
 }
