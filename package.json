@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "testdev":"node examples/index.js",
+    "testdev": "node examples/index.js",
     "test": "mocha test/index.js --exit",
     "dev": "node examples/index.js"
   },
@@ -13,12 +13,15 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.7",
+    "debug": "^4.3.4",
+    "finalhandler": "^1.2.0",
     "karma": "^6.4.2",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.2.0",
     "karma-mocha": "^2.0.1",
     "merge-descriptors": "^1.0.1",
     "mocha": "^10.2.0",
+    "path-to-regexp": "^6.2.1",
     "supertest": "^6.3.3"
   }
 }
