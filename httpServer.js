@@ -11,6 +11,8 @@ server.on("request", (req, res) => {
   // 调用 res.end() 方法，向客户端响应一些内容
   res.end(str);
 });
+
+
 server.listen(8080, () => {
   console.log("server running at http://127.0.0.1");
 });
