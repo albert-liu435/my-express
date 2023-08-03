@@ -32,3 +32,12 @@ app.get("/get/:id", function (req, res) {
   res.end(`{"id":${res.params.id}}`);
 });
 exports = module.exports = app;
+
+
+//总结一下当前expross各个部分的工作。
+
+//application代表一个应用程序，expross是一个工厂类负责创建application对象。Router代表路由组件，负责应用程序的整个路由系统。组件内部由一个Layer数组构成，每个Layer代表一组路径相同的路由信息，
+//具体信息存储在Route内部，每个Route内部也是一个Layer对象，但是Route内部的Layer和Router内部的Layer是存在一定的差异性。
+
+//Router内部的Layer，主要包含path、route、handle(route.dispatch)属性。 Route内部的Layer，主要包含method、handle属性。 如果一个请求来临，会现从头至尾的扫描router内部的每一层，而处理每层的时候会先对比URI，
+//相同则扫描route的每一项，匹配成功则返回具体的信息，没有任何匹配则返回未找到。
